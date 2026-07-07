@@ -1,17 +1,17 @@
 <mxfile host="app.diagrams.net">
   <diagram name="第 1 页" id="85N51_h4YP-xtCo8zdc5">
-    <mxGraphModel dx="933" dy="595" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1406" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;classDiagram\n    direction TB\n    class StreamEvent {\n        &lt;&lt;frozen dataclass&gt;&gt;\n        +id: str\n        +event: str\n        +data: Any\n    }\n    class StreamBridge {\n        &lt;&lt;abstract&gt;&gt;\n        +publish(run_id: str, event: str, data: Any)* Future~None~\n        +publish_end(run_id: str)* Future~None~\n        +subscribe(run_id: str, last_event_id: str?, heartbeat_interval: float)* AsyncIterator~StreamEvent~\n        +cleanup(run_id: str, delay: float)* Future~None~\n        +close() Future~None~\n    }\n    class _RunStream {\n        &lt;&lt;dataclass&gt;&gt;\n        +events: list~StreamEvent~\n        +condition: asyncio.Condition\n        +ended: bool\n        +start_offset: int\n    }\n    class MemoryStreamBridge {\n        -_maxsize: int\n        -_streams: dict~str, _RunStream~\n        -_counters: dict~str, int~\n        +__init__(queue_maxsize: int = 256)\n        -_get_or_create_stream(run_id: str) _RunStream\n        -_next_id(run_id: str) str\n        -_parse_event_seq(event_id: str)$ int?\n        -_resolve_start_offset(stream: _RunStream, last_event_id: str?) int\n        +publish(run_id: str, event: str, data: Any) Future~None~\n        +publish_end(run_id: str) Future~None~\n        +subscribe(run_id: str, last_event_id: str?, heartbeat_interval: float) AsyncIterator~StreamEvent~\n        +cleanup(run_id: str, delay: float) Future~None~\n        +close() Future~None~\n    }\n    StreamBridge &lt;|-- MemoryStreamBridge : implements\n    MemoryStreamBridge *-- _RunStream : _streams(1..*)\n    _RunStream o-- StreamEvent : events(0..*)\n    StreamBridge ..&gt; StreamEvent : subscribe yields\n    StreamBridge ..&gt; StreamEvent : HEARTBEAT_SENTINEL / END_SENTINEL&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="i4MgSi6oi87rNT8abKJ5-3">
-          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=20;" vertex="1">
-            <mxGeometry as="geometry" />
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=1;groupPadding=20;" vertex="1">
+            <mxGeometry height="1250" width="420" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="«frozen dataclass»&lt;br&gt;&lt;b&gt;StreamEvent&lt;/b&gt;" mermaidId="n:StreamEvent" mermaidBaseStyle="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="«frozen dataclass»&lt;br&gt;&lt;b&gt;StreamEvent&lt;/b&gt;" id="i4MgSi6oi87rNT8abKJ5-4">
           <mxCell parent="i4MgSi6oi87rNT8abKJ5-3" style="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
-            <mxGeometry height="188" width="170" x="841" y="1099" as="geometry" />
+            <mxGeometry height="188" width="170" x="1271" y="1109" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="i4MgSi6oi87rNT8abKJ5-5" parent="i4MgSi6oi87rNT8abKJ5-4" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=12;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+id: str" vertex="1">
@@ -28,7 +28,7 @@
         </mxCell>
         <UserObject label="«abstract»&lt;br&gt;&lt;b&gt;StreamBridge&lt;/b&gt;" mermaidId="n:StreamBridge" mermaidBaseStyle="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="«abstract»&lt;br&gt;&lt;b&gt;StreamBridge&lt;/b&gt;" id="i4MgSi6oi87rNT8abKJ5-9">
           <mxCell parent="i4MgSi6oi87rNT8abKJ5-3" style="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
-            <mxGeometry height="236" width="778" x="537" y="40" as="geometry" />
+            <mxGeometry height="236" width="778" x="967" y="50" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="i4MgSi6oi87rNT8abKJ5-10" parent="i4MgSi6oi87rNT8abKJ5-9" style="line;strokeWidth=1;fillColor=none;spacingLeft=3;spacingRight=3;rotatable=0;points=[];strokeColor=inherit;" vertex="1">
@@ -51,7 +51,7 @@
         </mxCell>
         <UserObject label="«dataclass»&lt;br&gt;&lt;b&gt;_RunStream&lt;/b&gt;" mermaidId="n:_RunStream" mermaidBaseStyle="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="«dataclass»&lt;br&gt;&lt;b&gt;_RunStream&lt;/b&gt;" id="i4MgSi6oi87rNT8abKJ5-16">
           <mxCell parent="i4MgSi6oi87rNT8abKJ5-3" style="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
-            <mxGeometry height="212" width="280" x="351" y="820" as="geometry" />
+            <mxGeometry height="212" width="280" x="781" y="830" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="i4MgSi6oi87rNT8abKJ5-17" parent="i4MgSi6oi87rNT8abKJ5-16" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=12;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+events: list&lt;StreamEvent&gt;" vertex="1">
@@ -71,13 +71,13 @@
         </mxCell>
         <UserObject label="&lt;b&gt;MemoryStreamBridge&lt;/b&gt;" mermaidId="n:MemoryStreamBridge" mermaidBaseStyle="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;MemoryStreamBridge&lt;/b&gt;" id="i4MgSi6oi87rNT8abKJ5-22">
           <mxCell parent="i4MgSi6oi87rNT8abKJ5-3" style="swimlane;html=1;fontStyle=0;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
-            <mxGeometry height="404" width="801" x="90" y="343" as="geometry" />
+            <mxGeometry height="404" width="801" x="520" y="353" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="i4MgSi6oi87rNT8abKJ5-23" parent="i4MgSi6oi87rNT8abKJ5-22" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=12;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="-_maxsize: int" vertex="1">
           <mxGeometry height="24" width="801" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="i4MgSi6oi87rNT8abKJ5-24" parent="i4MgSi6oi87rNT8abKJ5-22" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=12;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="-_streams: dict&lt;str, _RunStream&gt;" vertex="1">
+        <mxCell id="i4MgSi6oi87rNT8abKJ5-24" parent="i4MgSi6oi87rNT8abKJ5-22" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=12;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="-_streams: dict&lt;str, _RunStream&gt;  # run_id和RunStream的映射" vertex="1">
           <mxGeometry height="24" width="801" y="84" as="geometry" />
         </mxCell>
         <mxCell id="i4MgSi6oi87rNT8abKJ5-25" parent="i4MgSi6oi87rNT8abKJ5-22" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=12;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="-_counters: dict&lt;str, int&gt;" vertex="1">
@@ -120,7 +120,7 @@
           <mxCell edge="1" parent="i4MgSi6oi87rNT8abKJ5-3" source="i4MgSi6oi87rNT8abKJ5-9" style="curved=1;startArrow=block;startSize=14;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#ECECFF,#1f2020);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.07;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="i4MgSi6oi87rNT8abKJ5-22">
             <mxGeometry relative="1" as="geometry">
               <Array as="points">
-                <mxPoint x="491" y="309" />
+                <mxPoint x="921" y="319" />
               </Array>
             </mxGeometry>
           </mxCell>
@@ -136,7 +136,7 @@
           <mxCell edge="1" parent="i4MgSi6oi87rNT8abKJ5-3" source="i4MgSi6oi87rNT8abKJ5-16" style="curved=1;startArrow=diamondThin;startSize=14;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#ECECFF,#1f2020);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.37;rounded=0;" target="i4MgSi6oi87rNT8abKJ5-4">
             <mxGeometry relative="1" as="geometry">
               <Array as="points">
-                <mxPoint x="491" y="1065" />
+                <mxPoint x="921" y="1075" />
               </Array>
             </mxGeometry>
           </mxCell>
@@ -152,15 +152,27 @@
           <mxCell edge="1" parent="i4MgSi6oi87rNT8abKJ5-3" source="i4MgSi6oi87rNT8abKJ5-9" style="curved=1;dashed=1;startArrow=none;endArrow=classic;endSize=9;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#ECECFF,#1f2020);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.71;exitY=1;entryX=1;entryY=0.23;fixDash=1;rounded=0;" target="i4MgSi6oi87rNT8abKJ5-4">
             <mxGeometry relative="1" as="geometry">
               <Array as="points">
-                <mxPoint x="1142" y="309" />
-                <mxPoint x="1142" y="547" />
-                <mxPoint x="1142" y="786" />
-                <mxPoint x="1142" y="925" />
-                <mxPoint x="1142" y="1065" />
+                <mxPoint x="1572" y="319" />
+                <mxPoint x="1572" y="557" />
+                <mxPoint x="1572" y="796" />
+                <mxPoint x="1572" y="935" />
+                <mxPoint x="1572" y="1075" />
               </Array>
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="Ggibv0j6KGetXMULrgx9-3" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="publish(self, run_id: str, event: str, data: Any)" vertex="1">
+          <mxGeometry height="200" width="340" x="100" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Ggibv0j6KGetXMULrgx9-5" parent="Ggibv0j6KGetXMULrgx9-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="1. 通过run_id获取或创建一个stream&lt;br&gt;2. 将要发送的数据打包成一个StreamEvent&lt;br&gt;3. 将打包后的数据添加到属于该run_id的events列表中&lt;br&gt;4. 若超出最大列表长度，则更新start_offset&lt;br&gt;5. 通知消费者" vertex="1">
+          <mxGeometry height="137" width="290" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ggibv0j6KGetXMULrgx9-6" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="publish_end(self, run_id: str)" vertex="1">
+          <mxGeometry height="200" width="290" x="100" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Ggibv0j6KGetXMULrgx9-7" parent="Ggibv0j6KGetXMULrgx9-6" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="1. 通过run_id拿到_RunStream&lt;br&gt;2. 将该RunStream的ended状态置为True&lt;br&gt;3. 通知消费者" vertex="1">
+          <mxGeometry height="137" width="270" x="20" y="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
