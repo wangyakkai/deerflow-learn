@@ -1,9 +1,78 @@
 <mxfile host="app.diagrams.net">
   <diagram name="第 1 页" id="zkgAXSKVfCMZTXvEuH9t">
-    <mxGraphModel>
+    <mxGraphModel dx="4633" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-11" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-17" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-18" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-26" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="测试主机1" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-24" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="测试主机2" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-12" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="TQVT3KjI1XUjzYPu_88E-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="云服务器1" vertex="1">
+          <mxGeometry height="60" width="120" x="-40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="服务主机" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-25" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-6" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="交换机" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-16" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="无线网关1" vertex="1">
+          <mxGeometry height="60" width="120" x="-30" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-20" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="无线网关2" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="AIPID网关" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-14" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="摄像头" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="无线适配器" vertex="1">
+          <mxGeometry height="60" width="120" x="-30" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="压力变送器" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-22" edge="1" parent="1" source="TQVT3KjI1XUjzYPu_88E-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;" target="TQVT3KjI1XUjzYPu_88E-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQVT3KjI1XUjzYPu_88E-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="云服务器2" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="290" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
