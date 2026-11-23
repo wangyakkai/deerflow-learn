@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="第 1 页" id="7h5hWFVUvSeX7EmoRDlF">
+    <mxGraphModel dx="1333" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-1" parent="1" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;labelPerimeter=1;" value="交换机" vertex="1">
+          <mxGeometry height="50" width="101" x="720" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-2" parent="1" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.servers.standard_host;labelPerimeter=1;" value="云服务器&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="43" x="162" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-3" parent="1" style="sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.computers_and_peripherals.pc;labelPerimeter=1;" value="测试主机2" vertex="1">
+          <mxGeometry height="70" width="78" x="540" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-4" parent="1" style="sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.computers_and_peripherals.video_camera;labelPerimeter=1;" value="摄像头" vertex="1">
+          <mxGeometry height="62" width="50" x="280" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-7" parent="1" style="sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.computers_and_peripherals.pc;labelPerimeter=1;" value="测试主机1" vertex="1">
+          <mxGeometry height="70" width="78" x="300" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-8" parent="1" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.wireless.wlan_controller;labelPerimeter=1;" value="无线网关1" vertex="1">
+          <mxGeometry height="56.00000000000001" width="101" x="405" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-9" parent="1" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.wireless.wlan_controller;labelPerimeter=1;" value="无线网关2" vertex="1">
+          <mxGeometry height="56.00000000000001" width="101" x="570" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-10" parent="1" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=light-dark(#036897, #bfd3ff);shape=mxgraph.mscae.enterprise.gateway;perimeter=ellipsePerimeter;labelPerimeter=1;" value="AIPID网关" vertex="1">
+          <mxGeometry height="50" width="50" x="860" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-11" edge="1" parent="1" source="6a9CQ1mbeN8M2cExA1_h-7" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="6a9CQ1mbeN8M2cExA1_h-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="355" y="520" as="sourcePoint" />
+            <mxPoint x="405" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-12" edge="1" parent="1" source="6a9CQ1mbeN8M2cExA1_h-7" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="6a9CQ1mbeN8M2cExA1_h-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="430" as="sourcePoint" />
+            <mxPoint x="720" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-13" edge="1" parent="1" source="6a9CQ1mbeN8M2cExA1_h-7" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="6a9CQ1mbeN8M2cExA1_h-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="430" as="sourcePoint" />
+            <mxPoint x="720" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-14" edge="1" parent="1" source="6a9CQ1mbeN8M2cExA1_h-7" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="6a9CQ1mbeN8M2cExA1_h-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="430" as="sourcePoint" />
+            <mxPoint x="720" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-15" edge="1" parent="1" source="6a9CQ1mbeN8M2cExA1_h-7" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="6a9CQ1mbeN8M2cExA1_h-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="430" as="sourcePoint" />
+            <mxPoint x="720" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6a9CQ1mbeN8M2cExA1_h-16" parent="1" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.servers.standard_host;labelPerimeter=1;" value="服务主机&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="43" x="60" y="287" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
